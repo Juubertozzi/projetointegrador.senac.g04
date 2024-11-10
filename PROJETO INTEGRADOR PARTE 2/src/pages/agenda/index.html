@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/public/css/fonts.css">
+    <link rel="stylesheet" href="/public/css/global.css">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Agendamento</title>
+</head>
+
+<body>
+
+    <nav>
+        <a href="/src/pages/home/" aria-label="Página inicial">
+            <i class="fa fa-house"> </i>
+        </a>
+    </nav>
+    
+    <header>
+        <h1> Therapy.com </h1>
+        <a href="/src/pages/login/index.html"> <button> LOGIN </button> </a>
+    </header>
+
+    <div class="container">
+        <h2> Agendamento </h2>
+        <form action="/submit" method="POST">
+            <label for="data"> Escolha a data: </label>
+            <input type="date" id="data" name="data" required>
+
+            <label for="hora"> Escolha a hora: </label>
+            <input type="time" id="hora" name="hora" required>
+
+            <label for="profissional"> Escolha o profissional: </label>
+            <select name="profissional" id="profissional" required>
+                <option value="">Selecione</option>
+                <option value="prof1"> Dr. Rafael </option>
+                <option value="prof2"> Dra. Luana </option>
+                <option value="prof3"> Dra. Júlia </option>
+                <option value="prof4"> Dr. Gustavo </option>
+            </select>
+
+            <label for="pacote"> Escolha o pacote: </label>
+            <select name="pacote" id="pacote" required>
+                <option value="">Selecione</option>
+                <option value="pacote0"> Sessão Experimental (ÚNICA) - R$ 150,00 </option>
+                <option value="pacote1"> Individual (Mensal, 4 Sessões) - R$500,00 </option>
+                <option value="pacote2"> Casal (Mensal, 4 Sessões) - R$900,00 </option>
+                <option value="pacote3"> Familiar (Mensal, 4 Sessões) - R$1300,00 </option>
+            </select>
+
+            <label for="metodo_pagamento"> Método de Pagamento: </label>
+            <select name="metodo_pagamento" id="metodo_pagamento" required>
+                <option value=""> Selecione </option>
+                <option value="credito"> Crédito </option>
+                <option value="debito"> Débito </option>
+                <option value="pix"> PIX </option>
+            </select>
+
+            <button type="submit"> Finalizar </button>
+        </form>
+    </div>
+
+</body>
+
+</html>
+
+
